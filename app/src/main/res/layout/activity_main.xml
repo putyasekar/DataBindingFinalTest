@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="mainBainding"
+            type="com.diki.idn.databindingfinaltest.MainViewModel" />
+
+        <variable
+            name="imageCat"
+            type="android.graphics.drawable.Drawable" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/instagram_lable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/instagram"
+            android:fontFamily="@font/instagram_font"
+            android:text="@string/instagram"
+            android:textColor="#000"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/sg"
+            app:layout_constraintStart_toEndOf="@+id/sg"
+            app:layout_constraintTop_toTopOf="@+id/sg"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/direct_message"
+            android:layout_width="28dp"
+            android:layout_height="19dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/dm"
+            app:layout_constraintBottom_toBottomOf="@+id/instagram_lable"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/instagram_lable"
+            app:layout_constraintVertical_bias="0.571"
+            app:srcCompat="@drawable/share_ig" />
+
+        <ImageView
+            android:id="@+id/sg"
+            android:layout_width="50dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="12dp"
+            android:contentDescription="@string/camera"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.022"
+            app:srcCompat="@drawable/camera_ig" />
+
+        <ImageView
+            android:id="@+id/comment"
+            android:layout_width="29dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="4dp"
+            android:contentDescription="@string/comment"
+            app:layout_constraintBottom_toBottomOf="@+id/like"
+            app:layout_constraintStart_toEndOf="@+id/like"
+            app:layout_constraintTop_toTopOf="@+id/like"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/comment_ig" />
+
+        <ImageView
+            android:id="@+id/share"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="4dp"
+            android:contentDescription="@string/share"
+            app:layout_constraintBottom_toBottomOf="@+id/comment"
+            app:layout_constraintStart_toEndOf="@+id/comment"
+            app:layout_constraintTop_toTopOf="@+id/comment"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/share_ig" />
+
+        <ImageView
+            android:id="@+id/bookmarks"
+            android:layout_width="22dp"
+            android:layout_height="38dp"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="@string/save"
+            app:layout_constraintBottom_toBottomOf="@+id/share"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/share"
+            app:layout_constraintVertical_bias="0.272"
+            app:srcCompat="@drawable/save_g" />
+
+        <ImageView
+            android:id="@+id/like"
+            android:layout_width="26dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="16dp"
+            android:contentDescription="@string/like"
+            android:onClick="@{()->mainBainding.onLike()}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/photo_profile"
+            app:layout_constraintVertical_bias="0.754"
+            app:popularityIcon="@{mainBainding.popularity}" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="224dp"
+            android:contentDescription="@string/username"
+            android:text="@string/username"
+            android:textColor="#000"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/photo_profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/photo_profile" />
+
+        <ImageView
+            android:id="@+id/photo_profile"
+            android:layout_width="28dp"
+            android:layout_height="33dp"
+            android:layout_marginTop="15dp"
+            android:contentDescription="@string/profile"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/instagram_lable"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/sg"
+            app:layout_constraintTop_toBottomOf="@+id/sg"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/profile" />
+
+        <ImageView
+            android:id="@+id/titik_tiga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:contentDescription="@string/titik"
+            app:layout_constraintBottom_toBottomOf="@+id/username"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/username"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/titik_tiga" />
+
+        <TextView
+            android:id="@+id/time_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="10dp"
+            android:contentDescription="@string/time_post"
+            android:text="@string/time_post"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/likes_total"
+            app:layout_constraintVertical_bias="0.991" />
+
+        <ImageView
+            android:id="@+id/kucing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:contentDescription="@string/kucing"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@{imageCat}" />
+
+        <TextView
+            android:id="@+id/cat_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="108dp"
+            android:contentDescription="@string/username"
+            android:text="@string/username"
+            android:textColor="#000"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.058"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/caption_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/caption_2"
+            android:text="@string/caption_2"
+            android:textColor="#000"
+            app:layout_constraintEnd_toEndOf="@+id/cat_username"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/cat_username"
+            app:layout_constraintTop_toBottomOf="@+id/cat_username" />
+
+        <TextView
+            android:id="@+id/more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/more"
+            android:text="@string/more"
+            app:layout_constraintBottom_toBottomOf="@+id/caption_two"
+            app:layout_constraintStart_toEndOf="@+id/caption_two"
+            app:layout_constraintTop_toTopOf="@+id/caption_two"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/all_comments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/all_comments"
+            android:text="@string/all_comments"
+            app:layout_constraintEnd_toEndOf="@+id/more"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/caption_two"
+            app:layout_constraintTop_toBottomOf="@+id/caption_two" />
+
+        <TextView
+            android:id="@+id/caption_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="60dp"
+            android:contentDescription="@string/caption_1"
+            android:text="@string/caption_1"
+            android:textColor="#000"
+            app:layout_constraintBottom_toBottomOf="@+id/cat_username"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cat_username"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/likes_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:contentDescription="@string/total_likes"
+            android:text="@{Integer.toString(mainBainding.likeNumbers)}"
+            android:textColor="#000"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.045"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/like" />
+
+        <ImageView
+            android:id="@+id/my_profile"
+            android:layout_width="49dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="7dp"
+            android:contentDescription="@string/profile"
+            app:layout_constraintBottom_toTopOf="@+id/time_post"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/likes_total"
+            app:layout_constraintVertical_bias="0.906"
+            app:srcCompat="@drawable/my_profile" />
+
+        <EditText
+            android:id="@+id/et_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/add_comment"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            app:layout_constraintBottom_toBottomOf="@+id/my_profile"
+            app:layout_constraintStart_toEndOf="@+id/my_profile"
+            app:layout_constraintTop_toTopOf="@+id/my_profile"
+            app:layout_constraintVertical_bias="0.545"
+            tools:ignore="LabelFor" />
+
+        <ImageView
+            android:id="@+id/notif"
+            android:layout_width="17dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@string/notif"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.555"
+            app:layout_constraintStart_toStartOf="@+id/direct_message"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/notif" />
+
+        <TextView
+            android:id="@+id/emot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="76dp"
+            android:contentDescription="@string/emot"
+            android:text="@string/emot"
+            app:layout_constraintBottom_toBottomOf="@+id/et_comment"
+            app:layout_constraintStart_toEndOf="@+id/et_comment"
+            app:layout_constraintTop_toTopOf="@+id/et_comment" />
+
+        <ImageView
+            android:id="@+id/add"
+            android:layout_width="14dp"
+            android:layout_height="16dp"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="@string/add"
+            app:layout_constraintBottom_toBottomOf="@+id/emot"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/emot"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/add" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

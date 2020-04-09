@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Data Binding Final Test</string>
+    <string name="instagram">Instagram</string>
+    <string name="username">cutestcatscommunity</string>
+    <string name="total_likes">439 likes</string>
+    <string name="time_post">1 hour ago</string>
+    <string name="caption_1">Rate This Cute Cat 1-10 In The</string>
+    <string name="caption_2">Comments Below👇</string>
+    <string name="more">...more</string>
+    <string name="all_comments">View all 6 comments</string>
+    <string name="add_comment">Add a comments</string>
+    <string name="dm">dm</string>
+    <string name="camera">camera</string>
+    <string name="comment">comment</string>
+    <string name="share">share</string>
+    <string name="save">save</string>
+    <string name="like">like</string>
+    <string name="profile">profile</string>
+    <string name="titik">titik</string>
+    <string name="kucing">kucing lucu bgt</string>
+    <string name="notif">notif</string>
+    <string name="emot">😂😍</string>
+    <string name="add">add</string>
+    <string name="commentadd">comment</string>
+    <string name="back">back</string>
+    <string name="comment_lable">Comments</string>
+    <string name="edited">Edited</string>
+    <string name="my">profpic</string>
+    <string name="my_username">veroanggra</string>
+    <string name="my_comment1">She is a 10. My Oh My, She is a</string>
+    <string name="my_comment2">beauty. The color is fabulous...</string>
+    <string name="love">love</string>
+    <string name="date">2h</string>
+    <string name="replay">Reply</string>
+</resources>
